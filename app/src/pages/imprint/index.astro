@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavBar from "../../components/NavBar.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Hammerstücke">
+  <div class="nav">
+    <NavBar />
+  </div>
+  <main class="flex flex-col">
+    <div
+      class="flex justify-center xl:flex-row md:flex-row sm:flex-row flex-col gap-5 pb-10"
+    >
+      <!-- <h1>The current URL is: {Astro.url.pathname}</h1> -->
+      <h1>Impressum</h1>
+    </div>
+    <div class="footer w-screen xl:absolute md:absolute sm:absolute sticky">
+      <Footer />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    overflow-x: scroll;
+    background-color: #eef0f2;
+  }
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  .nav {
+    background-color: #a2999e;
+  }
+  .footer {
+    background-color: #a2999e;
+    bottom: 0;
+    height: auto;
+    padding: 10px;
+  }
+  @font-face {
+    font-family: "ModernSans-Light";
+    src: url("app/public/fonts/ModernSans-Light.otf");
+  }
+</style>
